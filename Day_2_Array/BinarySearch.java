@@ -25,7 +25,7 @@ public class BinarySearch{
     }
 
     public static void main(String args[]){
-        int arr[]={2,4,6,8,10,12,14,16,18};
+        int arr[]={2,4,6,8,10,12,14,16,20};
         int key=10;
         
         System.out.println("key is Found at index : "+ BinaryS(arr,key));

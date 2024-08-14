@@ -1,5 +1,4 @@
 //TC=O(n^3)
-
 import java.util.*;
 public class MaxSum{
     public static void max(int arr[]){
@@ -16,10 +15,8 @@ public class MaxSum{
                     maxsum=currsum;
                 }
             }
-             
-        }
+            }
         System.out.println("Maxmum Sum "+maxsum);
-        
     }
     public static void main(String args[]){
         int arr[]={2,4,5,-1,10};

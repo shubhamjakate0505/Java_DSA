@@ -12,7 +12,6 @@ public class Question4{
         }
         System.out.println("Total pair : "+tp);
     }
-
     public static void main(String args[]){
         int arr[]={2,4,6,8,10};
         pair(arr);

@@ -1,4 +1,4 @@
-//o(n)
+//O(n)
 import java.util.*;
 public class Acentor{
     static class Node{

@@ -56,7 +56,7 @@ public static Node lca2(Node root,int n1,int n2){
         root.left.right=new Node(5);
         root.right.right=new Node(6);
         root.right.left=new Node(7);
-       int n1=4, n2=5;
+       int n1=4, n2=7;
        System.out.println(lca2(root,n1,n2).data);
 
     }

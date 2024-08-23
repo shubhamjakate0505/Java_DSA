@@ -74,7 +74,7 @@ public static boolean Search(Node root,int key){
     if(Search(root,25)){
         System.out.print("key Found");
     }else{
-        System.out.print("No Found";   
+        System.out.print("No Found");   
     }
 
     }

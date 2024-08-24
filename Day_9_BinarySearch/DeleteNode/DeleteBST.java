@@ -110,6 +110,6 @@ public static Node findInoderSuccessor(Node root){
 
     root=delete(root,1);
     System.out.println();
-    inOrder(root);
+    inOrder(root)
        }
 }

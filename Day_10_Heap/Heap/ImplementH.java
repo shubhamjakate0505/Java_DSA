@@ -75,7 +75,7 @@ public class ImplementH{
         h.add(3);
         h.add(4);
         h.add(1);
-        h.add(5);
+        h.add(9);
 
         while(!h.isEmpty()){
             System.out.println(h.peek());

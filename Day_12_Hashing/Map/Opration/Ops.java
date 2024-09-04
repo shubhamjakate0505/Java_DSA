@@ -5,7 +5,7 @@ public class Ops{
         //insert
         hm.put("India",12000);
         hm.put("Chine",50);
-        hm.put("US",100);
+        hm.put("USA",100);
         hm.put("Indonisiya",200);
         hm.put("America",300);
        /*  System.out.println(hm);

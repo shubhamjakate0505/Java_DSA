@@ -26,7 +26,7 @@ public class Ops{
     System.out.println(keys);
 
     for(String k:keys){
-        System.out.println(" Key = " + k+", values "+hm.get(k));
+        System.out.println(" Key = " + k+ ", values "+hm.get(k));
     }
 
     }

@@ -6,7 +6,7 @@ public class StartWith{
         Node Childern[]=new Node[26];//childern data
         boolean eow=false;//end of word
 
-         Node(){
+        public Node(){
         for(int i=0;i<26;i++){
             Childern[i]=null;
         }

@@ -53,13 +53,39 @@ public class Ques{
 
     public static boolean isCycle(ArrayList<Edge>[] graph){
       boolean vis[]=new boolean[graph.length];
-      boolean
+      boolean stack[]=new boolean[graph.length];
+
+      for(int i=0;i<graph.length;i++){
+        if(!vis[i]){
+          if(isCycleutil(graph,i,vis,stack)){
+            return true;
+          }
+        }
+      }
+      return false;
+    }
+    public static boolean isCycleutil(ArrayList<Edge>[] graph,int curr,boolean vis[],boolean stack[]){
+      vis[curr]=true;
+      stack[curr]=true;
+
+      for(int i=0;i<graph[0].size();i++){
+        Edge e=graph[curr].get(i);
+        if(stack[e.dest]){
+          return true;
+        }
+        if(!vis[e.dest]&& isCycleutil(graph,e.dest,vis,stack)){
+          return true;
+        }
+      }
+      stack[curr]=false;
+      return false;
     }
 
     public static void main(String args[]){
        int v=4;
        ArrayList<Edge>[] graph=new ArrayList[v];//empty arraylist
       creategraph(graph);  
+      System.out.println(isCycle(graph));
 
         
       

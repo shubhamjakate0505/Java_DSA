@@ -68,7 +68,7 @@ public static boolean DetectCycleUtility(ArrayList<Edge>[] graph,boolean vis[],i
     //case 2 do nathing
     
     }
-    return false;
+    return false ;
 
 }
 

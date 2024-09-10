@@ -42,7 +42,7 @@ public class Topo{
                 }
         }
         while(!s.isEmpty()){
-            System.out.println(s.pop()+" ");
+            System.out.println(s.pop()+"");
 
         }
     } 

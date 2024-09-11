@@ -70,7 +70,7 @@ public class Algo{
                 }
             }
         }
-        System.out.println("Final(min) cost of  :- "+finalCost);
+        System.out.println("Final(min)  cost of  :- "+finalCost);
 
         }
 

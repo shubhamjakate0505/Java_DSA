@@ -1,22 +1,28 @@
 import java.util.*;
-public class prob{
-    public static int dublicate(int arr[]){
-            for(int i=0;i<arr.length-1;i++){
-                for(int j=i+1;j<arr.length;j++){
-                    if(arr[i]==arr[j]){
-                       for(int k=j;k<arr.length-1;k++){
-                        arr[k]=arr[k+1];
-                       }
-                       arr--;
-                       j--;
-                    }
-                }
+
+public class prob {
+    public static int removedublicate(int arr[]) {
+        int k = 1;
+        for (int i = 1; i < arr.length; i++) { // Fix loop to iterate through entire array
+            if (arr[i] != arr[k - 1]) {
+                arr[k] = arr[i];
+                k++;
             }
-           
+        }
+        return k; // k is the new length of the array without duplicates
     }
-    
-    public static void main(String args[]){
-        int arr[]={1,2,1,3};
-        System.out.println(dublicate(arr));
+
+    public static void main(String args[]) {
+        int arr[] = {3, 2, 1, 1};
+
+        // Optionally sort array if not sorted
+        Arrays.sort(arr);  // Sorting ensures duplicate elements are adjacent
+
+        int newLength = removedublicate(arr);
+
+        System.out.println("Array after removing duplicates: ");
+        for (int i = 0; i < newLength; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }

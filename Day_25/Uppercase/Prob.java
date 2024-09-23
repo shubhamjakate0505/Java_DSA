@@ -18,7 +18,7 @@ public class Prob{
         // char.toUpperchar()
     }
     public static void main(String args[]){
-        String str="Hi , i am Sarika";
+        String str="Hi , i am Sanika";
         System.out.println(uppersa(str));
     }
 }

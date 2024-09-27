@@ -6,7 +6,7 @@ public class Prob{
         }
         int sum=n + Sumof(n-1);
         return sum;
-        // System.out.println("Sum is :"+sum);
+        // System.out.println("Sum i s :"+sum);
     }
     public static void main(String args[]){
         int n=10;

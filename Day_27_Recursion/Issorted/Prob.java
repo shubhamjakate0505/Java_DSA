@@ -14,7 +14,7 @@ public class Prob{
     
     public static void main(String args[]){
         int arr[]={1,2,3,4,5};
-        // int i=arr[1];
+        // int i=arr[9];
         System.out.println(iseorted(arr,0));
     }
 }

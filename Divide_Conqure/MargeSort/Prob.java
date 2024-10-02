@@ -55,6 +55,6 @@ public class Prob {
     public static void main(String args[]) {
         int arr[] = { 6, 3, 9, 5, 2, 8 };
         margesort(arr, 0, arr.length - 1);
-        printarr(arr); // prints sorted array
+        printarr(arr); // prints sorted arry
     }
 }

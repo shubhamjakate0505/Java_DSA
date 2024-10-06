@@ -1,5 +1,5 @@
 import java.util.*;
-public class LL{
+public class Prob{
     public class Node{
         int data;
         Node next;
@@ -104,24 +104,50 @@ public class LL{
         count--;
         return val;
     }
+    public static int SearchItrative(int key){
+        Node temp=head;
+        int idx=0;
+        while(temp!=null){
+            if(temp.data==key){
+                return idx;
+            }
+            temp=temp.next;
+            idx++;
+        }
+        return -1;
+    }
+    public int helper(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx=helper(head.next,key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+    }
+
+    public int RecurSearch(int key){
+        return helper(head,key);
+    }
 
     public static void main(String args[]){
-        LL ll=new LL();
+        Prob ll=new Prob();
         
-        ll.addFrist(10);
-        
-        ll.addFrist(20);
+        ll.addFrist(1);
+        ll.addFrist(2);
+        ll.addFrist(3);
+        ll.addFrist(4);
+        ll.addFrist(5);
+        ll.Printll();
+        System.out.println(ll.RecurSearch(2));
+        System.out.println(ll.RecurSearch(10));
        
-        ll.addLast(3);
         
-        ll.addLast(4);
-        ll.Addmiddle(2,7);
-        ll.removeFrist();
-        ll.Printll();
-        
-        System.out.println(ll.removelast());
-        ll.Printll();
-        System.out.println("Total count is : - "+ll.count);
+     
         
     }
 

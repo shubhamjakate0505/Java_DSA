@@ -144,7 +144,7 @@ public class Prob{
         ll.addFrist(5);
         ll.Printll();
         System.out.println(ll.RecurSearch(2));
-        System.out.println(ll.RecurSearch(10));
+        System.out.println(ll.RecurSearch(1));
        
         
      

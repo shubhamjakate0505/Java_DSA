@@ -1,6 +1,6 @@
 import java.util.*;
-public class Problum{
-    public class Node{
+public class Prob{
+    public static class Node{
         int data;
         Node next;
         public Node(int data){
@@ -117,7 +117,7 @@ public class Problum{
         return -1;
     }
 
-    public Node findmid(Node head){
+ /*    public Node findmid(Node head){
         Node slow=head;
         Node fast=head;
         while(fast!=null && fast.next!=null){
@@ -126,8 +126,8 @@ public class Problum{
         }
         return slow;
     }
-
-    public boolean checkpelidrom(){
+ */
+  /*   public boolean checkpelidrom(){
         if(head==null ||head.next==null){//head ka next is null hai 
             return true;
         }
@@ -154,20 +154,43 @@ public class Problum{
             right=right.next;
         }
         return true;
+    } */
+
+   public static boolean detectcycle(){
+    Node slow=head;
+    Node fast=head;
+
+    while(fast!=null && fast.next!=null){
+        slow=slow.next;
+        fast=fast.next.next;
+        if(slow==fast){
+            return true;
+        }
+
     }
+    return false;
+   }
+
+
+
+
 
     public static void main(String args[]){
-        Problum ll=new Problum();
+        // Problum ll=new Problum();
         
-        ll.addFrist(1);
-        ll.addFrist(2);
-        ll.addFrist(1);
+        // ll.addFrist(1);
+        // ll.addFrist(2);
+        // ll.addFrist(1);
         // ll.addFrist(4);
         // ll.addFrist(5);
         // ll.Printll();
-        System.out.println(ll.checkpelidrom());
+        // System.out.println(ll.checkpelidrom());
         // System.out.println(SearchItrative(10));
-       
+       head=new Node(1);
+       head.next= new Node(2);
+       head.next.next= new Node(3);
+    //    head.next.next.next=head;
+       System.out.println(detectcycle());
         
      
         

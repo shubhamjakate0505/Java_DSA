@@ -1,6 +1,6 @@
 import java.util.*;
-public class Problum{
-    public class Node{
+public class Prob{
+    public static class Node{
         int data;
         Node next;
         public Node(int data){
@@ -117,57 +117,63 @@ public class Problum{
         return -1;
     }
 
-    public Node findmid(Node head){
-        Node slow=head;
-        Node fast=head;
-        while(fast!=null && fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
-        }
-        return slow;
-    }
 
-    public boolean checkpelidrom(){
-        if(head==null ||head.next==null){//head ka next is null hai 
+
+   public static boolean detectcycle(){
+    Node slow=head;
+    Node fast=head;
+
+    while(fast!=null && fast.next!=null){
+        slow=slow.next;
+        fast=fast.next.next;
+        if(slow==fast){
             return true;
         }
-        //find min
-        Node midNode=findmid(head);
-        //reverse 2nd half
-        Node prev=null;
-        Node curr=midNode;
-        Node next;
-        while(curr !=null){
-            next=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=next;
-        }
-        Node right=prev;
-        Node left=head;
 
-        while(right!=null){
-            if(left.data!=right.data){
-                return false;
-            }
-            left=left.next;
-            right=right.next;
+    }
+    return false;
+   }
+
+public static void removecycle(){
+    //detect cycle
+    Node slow=head;
+    Node fast=head;
+    boolean cycle=false;
+    while(fast!=null && fast.next!=null){
+        slow=slow.next;
+        fast=fast.next.next;
+        if(slow==fast){
+            cycle=true;
+            break;
         }
+
+    }
+    if(cycle==false){
         return true;
     }
+    //find meeting point
+    slow =head;
+    Node prev=null;//last node
+    while(slow!=fast){
+        prev=fast;
+        slow=slow.next;
+        fast=fast.next;
+    }
+   
+
+    //Remove cycle -> last.next=null;
+    prev.next=null;
+}
+
+
 
     public static void main(String args[]){
-        Problum ll=new Problum();
-        
-        ll.addFrist(1);
-        ll.addFrist(2);
-        ll.addFrist(1);
-        // ll.addFrist(4);
-        // ll.addFrist(5);
-        // ll.Printll();
-        System.out.println(ll.checkpelidrom());
-        // System.out.println(SearchItrative(10));
-       
+      
+       head=new Node(1);
+       head.next= new Node(2);
+       head.next.next= new Node(3);
+   
+       System.out.println(detectcycle());
         
      
         

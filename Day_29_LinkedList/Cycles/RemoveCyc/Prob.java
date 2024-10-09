@@ -161,7 +161,7 @@ public static void removecycle(){
     }
    
 
-    //Remove cycle -> last.next=null;
+    //Remove cycle -> lastnext=null;
     prev.next=null;
 }
 

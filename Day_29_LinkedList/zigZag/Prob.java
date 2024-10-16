@@ -62,7 +62,7 @@ public class Prob{
             System.out.print(temp.data+" -> ");
             temp=temp.next;
         }
-        System.out.println("Null");
+        System.out.println("Nu ll");
     }
      public void addLast(int data){
         Node newnode=new Node(data);

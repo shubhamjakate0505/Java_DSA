@@ -6,7 +6,7 @@ public class Basic{
        public static boolean isEmpty(){
         return list.size()==0;
        }
-       //push
+       // push
        public static void Push(int data){
             list.add(data);
        }

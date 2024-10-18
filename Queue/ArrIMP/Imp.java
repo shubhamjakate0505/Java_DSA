@@ -14,7 +14,7 @@ public class Imp{
         }
         //add
         public static void add(int data){
-            //cheak weather our Queue is Full or not
+            //cheak weather our Queue is Full  not
             if(rear==size-1){
                 System.out.println("Queue is full");
                 return;

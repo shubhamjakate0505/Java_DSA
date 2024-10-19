@@ -25,7 +25,7 @@ public class Imp{
         //remove
         public static int remove(){
             if(isEmpty()){
-                System.out.println("Queue is Empty");
+                System.out.println("A Queue is Empty");
                 return -1;
 
                  }

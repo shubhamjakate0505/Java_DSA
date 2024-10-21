@@ -60,7 +60,7 @@ public class Prob {
 
             int top = -1;
 
-            // Move elements to the other queue and return the last removed element
+            // Move elements to the  other queue and return the last removed element
             if (!q1.isEmpty()) {
                 while (!q1.isEmpty()) {
                     top = q1.remove();

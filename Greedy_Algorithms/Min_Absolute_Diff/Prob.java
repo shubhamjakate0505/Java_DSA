@@ -12,7 +12,7 @@ public class Prob{
         for(int i=0;i<A.length;i++){
             MinDiff+=Math.abs(A[i]-B[i]);
         }
-        System.out.println("min Abosulte Dif   f : "+MinDiff);
+        System.out.println("min Abosulte Diff : "+MinDiff);
 
     }
 }

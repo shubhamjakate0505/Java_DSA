@@ -20,7 +20,7 @@ public class Prob{
                 lastEnd=end[i];
             }
         }
-        System.out.println("Max    Activities = " +maxAct);
+        System.out.println("Max  Activities = " +maxAct);
         for(int i=0;i<Ans.size();i++){
             System.out.print("A"+Ans.get(i)+" ");
         }
